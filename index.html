@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* CSS - comment */
+
+        /* Tag selector */
+        p { 
+            color: green; 
+            font-size: 110%;
+        }
+
+        /* Class selector */
+        .class1{
+            background-color: aqua;
+            color: blue;
+        }
+
+        /* id selector */
+        #mijn-lijst{
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dit is commentaar -->
+    <label>Invoer 1:</label>
+    <input type="number" id="invoer1">
+
+    <label>Invoer 2:</label>
+    <input type="number" id="invoer2">
+
+    <button type="button" onclick="doCalculation()">
+        Addition
+    </button>
+
+    <!-- Dit zijn header h1 - h5-->
+    <h1>Mijn website</h1>
+    <h2 class="class1">Dit is mijn tweede header</h2>
+
+    <!-- teksten - paragraaf en losse tekst -->
+    <p>Dit is mijn eerste paragraaf</p>
+    <p>Dit is mijn tweede paragraaf</p>
+
+    <span style="color:red">Dit is mijn eerste span</span>
+    <span>Dit is mijn tweede span</span>
+
+    <!-- Lijsten - Ordered and unordered -->
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+
+    <ul id="mijn-lijst">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <img src="AI art.jpeg" width="200">
+
+    <!-- Table is alleen bedoeld voor data weergevem-->
+    <table>
+        <tr>
+            <td>Rij 1 - Kolom 1</td>
+            <td>Rij 1 - Kolom 2</td>
+        </tr>
+        <tr>
+            <td>Rij 2 - Kolom 1</td>
+            <td>Rij 2 - Kolom 2</td>
+        </tr>
+    </table>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Naam</th>
+                <th>Leeftijd</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Henk</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>Margreet</td>
+                <td>422</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Lijst van personen</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script>
+        // 2 manieren data weergeven
+        // alert('Dit is een alert');
+        console.log('Dit is een melding');
+
+        let a;
+        a = 6; 
+        a = 12;
+        let b = "Tekst"; // Tekst -> string "" '' ``
+
+        const c = true;
+
+        // String - Number - Boolean (true/false)
+
+        console.log('a = ' + a)
+        console.log('b = ' + b)
+
+        let getal1 = a + 23;
+        let getal2 = 42 - getal1;
+        let getal3 = 4 * a;
+        let getal4 = getal2 / getal3
+
+        let comp1 = a == "12"; // Comparator vergelijkt de waarde a == "12" (true) -> rechts eerst
+        let comp2 = a == "12"; // false
+
+        if(comp1){
+            // Voert uit als comp1 true is
+        }
+        if (a == "12"){
+
+        } else{
+
+        }
+
+        // Function declaration
+        function addition(){
+            let add1 = 34;
+            let add2 = 23;
+
+            console.log('Addition = ' + (add1 + add2));
+        }
+
+        function subtract(arg1, arg2){
+            let answer = arg1 + arg2;
+
+            console.log('Answer = ' + answer);
+        }
+
+        // Function call 
+        addition();
+
+        subtract(4,6);
+
+        function doCalculation(){
+            let invoer1Waarde = document.getElementById('invoer1').value;
+            let invoer2Waarde = document.getElementById('invoer2').value;
+
+            invoer1waarde = parseInt(invoer1Waarde);
+            invoer2waarde = parseInt(invoer2Waarde);
+
+            alert('Calculation is ' + (invoer1waarde + invoer2waarde));
+
+            let bodyElements = document.getElementsByTagName("body")
+            bodyElements[0].innerHTML = '';
+        }
+
+    </script>
+
+</body>
+</html>
